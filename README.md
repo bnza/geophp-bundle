@@ -9,7 +9,7 @@ Repository currently marked as dev. Set up your ```composer.json``` consequently
  "repositories": [
     {
                 "type": "vcs",
-                "url": "https://github.com/pbald/geophp.git"
+                "url": "https://github.com/pbald/geophp-bundle.git"
     }
 ],
 ```
