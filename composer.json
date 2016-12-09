@@ -12,12 +12,12 @@
         "phpunit/phpunit":               ">=4.3"
     },
     "autoload": {
-        "psr-4": {
+        "psr-0": {
             "GeoPHP\\": "lib/"
         }
     },
     "autoload-dev": {
-        "psr-4": {
+        "psr-0": {
             "GeoPHP\\Tests\\": "tests/"
         }
     }
