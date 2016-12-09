@@ -1,12 +1,11 @@
 {
-    "name": "pbald/geophp",
+    "name": "pbald/geophp-bundle",
     "license": "GPL-3",
     "type": "library",
     "description": "GeoPHP Symfony2 Bundle",
     "keywords": ["parser", "lexer", "string", "text", "geometry", "geography", "spatial", "geo", "coordinate"],
     "require": {
         "php":            ">=5.3.3",
-<<<<<<< HEAD
         "ext-SPL":        "*"
     },
     "require-dev": {
@@ -14,28 +13,12 @@
     },
     "autoload": {
         "psr-4": {
-=======
-        "ext-SPL":        "*",
-        "doctrine/lexer": ">=1.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit":               ">=4.3",
-        "codeclimate/php-test-reporter": "dev-master"
-    },
-    "autoload": {
-        "psr-0": {
->>>>>>> 38ded220740cffe2990a8787ee5fe542da8ce085
             "GeoPHP\\": "lib/"
         }
     },
     "autoload-dev": {
-<<<<<<< HEAD
         "psr-4": {
             "GeoPHP\\Tests\\": "tests/"
-=======
-        "psr-0": {
-            "Tests\\GeoPHP\\": "tests/"
->>>>>>> 38ded220740cffe2990a8787ee5fe542da8ce085
         }
     }
 }
