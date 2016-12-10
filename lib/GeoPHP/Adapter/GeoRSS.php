@@ -61,15 +61,15 @@ class GeoRSS extends GeoAdapter
     $xmlobj = new \DOMDocument();
     @$xmlobj->loadXML($text);
     if ($xmlobj === false) {
-      throw new Exception("Invalid GeoRSS: ". $text);
+      throw new \Exception("Invalid GeoRSS: ". $text);
     }
     
     $this->xmlobj = $xmlobj;
     try {
       $geom = $this->geomFromXML();
     } catch(InvalidText $e) {
-        throw new Exception("Cannot Read Geometry From GeoRSS: ". $text);
-    } catch(Exception $e) {
+        throw new \Exception("Cannot Read Geometry From GeoRSS: ". $text);
+    } catch(\Exception $e) {
         throw $e;
     }
 
@@ -85,7 +85,7 @@ class GeoRSS extends GeoAdapter
     $geometries = array_merge($geometries, $this->parseCircles());
     
     if (empty($geometries)) {
-      throw new Exception("Invalid / Empty GeoRSS");
+      throw new \Exception("Invalid / Empty GeoRSS");
     }
     
     return GeoPhp::geometryReduce($geometries); 

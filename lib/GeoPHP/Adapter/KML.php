@@ -69,15 +69,15 @@ class KML extends GeoAdapter
     $xmlobj = new \DOMDocument();
     @$xmlobj->loadXML($text);
     if ($xmlobj === false) {
-      throw new Exception("Invalid KML: ". $text);
+      throw new \Exception("Invalid KML: ". $text);
     }
 
     $this->xmlobj = $xmlobj;
     try {
       $geom = $this->geomFromXML();
     } catch(InvalidText $e) {
-        throw new Exception("Cannot Read Geometry From KML: ". $text);
-    } catch(Exception $e) {
+        throw new \Exception("Cannot Read Geometry From KML: ". $text);
+    } catch(\Exception $e) {
         throw $e;
     }
 
@@ -155,7 +155,7 @@ class KML extends GeoAdapter
     $components[] = $this->parseLineString($outer_ring_element);
 
     if (count($components) != 1) {
-      throw new Exception("Invalid KML");
+      throw new \Exception("Invalid KML");
     }
 
     $inner_boundary_element_a = $this->childElements($xml, 'innerboundaryis');

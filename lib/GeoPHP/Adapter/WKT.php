@@ -254,8 +254,12 @@ class WKT extends GeoAdapter
           $parts[] = $this->extractData($component);
         }
         return implode(', ', $parts);
-      case 'Polygon':
       case 'MultiPoint':
+         foreach ($geometry->getComponents() as $component) {
+          $parts[] = $this->extractData($component);
+        }
+        return implode(', ', $parts);
+      case 'Polygon':
       case 'MultiLineString':
       case 'MultiPolygon':
         foreach ($geometry->getComponents() as $component) {

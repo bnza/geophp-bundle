@@ -60,15 +60,15 @@ class GPX extends GeoAdapter
     $xmlobj = new \DOMDocument();
     @$xmlobj->loadXML($text);
     if ($xmlobj === false) {
-      throw new Exception("Invalid GPX: ". $text);
+      throw new \Exception("Invalid GPX: ". $text);
     }
     
     $this->xmlobj = $xmlobj;
     try {
       $geom = $this->geomFromXML();
     } catch(InvalidText $e) {
-        throw new Exception("Cannot Read Geometry From GPX: ". $text);
-    } catch(Exception $e) {
+        throw new \Exception("Cannot Read Geometry From GPX: ". $text);
+    } catch(\Exception $e) {
         throw $e;
     }
 
@@ -82,7 +82,7 @@ class GPX extends GeoAdapter
     $geometries = array_merge($geometries, $this->parseRoutes());
     
     if (empty($geometries)) {
-      throw new Exception("Invalid / Empty GPX");
+      throw new \Exception("Invalid / Empty GPX");
     }
     
     return GeoPhp::geometryReduce($geometries); 

@@ -47,7 +47,7 @@ class WKB extends GeoAdapter
     }
 
     if (empty($wkb)) {
-      throw new Exception('Cannot read empty WKB geometry. Found ' . gettype($wkb));
+      throw new \Exception('Cannot read empty WKB geometry. Found ' . gettype($wkb));
     }
 
     $mem = fopen('php://memory', 'r+');
@@ -62,7 +62,7 @@ class WKB extends GeoAdapter
   function getGeometry(&$mem) {
     $base_info = unpack("corder/ctype/cz/cm/cs", fread($mem, 5));
     if ($base_info['order'] !== 1) {
-      throw new Exception('Only NDR (little endian) SKB format is supported at the moment');
+      throw new \Exception('Only NDR (little endian) SKB format is supported at the moment');
     }
 
     if ($base_info['z']) {

@@ -34,10 +34,10 @@ class GeoJson extends GeoAdapter
       $input = json_decode($input);
     }
     if (!is_object($input)) {
-      throw new Exception('Invalid Json');
+      throw new \Exception('Invalid Json');
     }
     if (!is_string($input->type)) {
-      throw new Exception('Invalid Json');
+      throw new \Exception('Invalid Json');
     }
 
     // Check to see if it's a FeatureCollection
@@ -120,7 +120,7 @@ class GeoJson extends GeoAdapter
   private function objToGeometryCollection($obj) {
     $geoms = array();
     if (empty($obj->geometries)) {
-      throw new Exception('Invalid GeoJson: GeometryCollection with no component geometries');
+      throw new \Exception('Invalid GeoJson: GeometryCollection with no component geometries');
     }
     foreach ($obj->geometries as $comp_object) {
       $geoms[] = $this->objToGeom($comp_object);

@@ -19,7 +19,7 @@ class LineString extends Collection
    */
   public function __construct($points = array()) {
     if (count($points) == 1) {
-      throw new Exception("Cannot construct a LineString with a single point");
+      throw new \Exception("Cannot construct a LineString with a single point");
     }
 
     // Call the Collection constructor to build the LineString

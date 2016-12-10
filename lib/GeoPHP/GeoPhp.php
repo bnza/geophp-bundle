@@ -16,7 +16,7 @@ use GeoPHP\Geometry\GeometryCollection;
 class GeoPhp {
 
     static function version() {
-        return '1.2';
+        return '1.2.1';
     }
 
     // GeoPhp::load($data, $type, $other_args);
@@ -50,7 +50,7 @@ class GeoPhp {
         $processor_type = $type_map[$type];
 
         if (!$processor_type) {
-            throw new exception('GeoPhp could not find an adapter of type ' . htmlentities($type));
+            throw new \Exception('GeoPhp could not find an adapter of type ' . htmlentities($type));
         }
 
         $processor_type = "GeoPHP\Adapter\\" . $processor_type;
