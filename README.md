@@ -1,6 +1,8 @@
 # geophp
 [GeoPHP](https://geophp.net/) Symfony2 Bundle
 
+##Install
+
 Repository currently marked as dev. Set up your ```composer.json``` consequently
 
 ```javascript
