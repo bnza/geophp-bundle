@@ -5,8 +5,9 @@ namespace GeoPHP\Tests;
 use GeoPHP\GeoPhp;
 use GeoPHP\Adapter\WKT;
 use GeoPHP\Geometry;
+use PHPUnit\Framework\TestCase;
 
-class AdaptersTests extends \PHPUnit_Framework_TestCase {
+class AdaptersTests extends TestCase {
 
   function setUp() {
 
@@ -47,6 +48,9 @@ class AdaptersTests extends \PHPUnit_Framework_TestCase {
 
             $output = $geometry->out($adapter_key);
             if ($output) {
+
+              $adapter_class = sprintf('GeoPHP\Adapter\%s', $adapter_class);
+
               $adapter_loader = new $adapter_class();
 
               $test_geom_1 = $adapter_loader->read($output);

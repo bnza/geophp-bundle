@@ -4,8 +4,9 @@ namespace GeoPHP\Tests;
 
 use GeoPHP\GeoPhp;
 use GeoPHP\Adapter\GeoHash;
+use PHPUnit\Framework\TestCase;
 
-class GeoHashTest extends \PHPUnit_Framework_TestCase {
+class GeoHashTest extends TestCase {
 
   function setUp() {
   }

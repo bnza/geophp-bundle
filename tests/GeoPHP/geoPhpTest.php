@@ -15,8 +15,9 @@
 namespace GeoPHP\Tests;
 
 use GeoPHP\GeoPhp;
+use PHPUnit\Framework\TestCase;
 
-class GeoPhpTest extends \PHPUnit_Framework_TestCase {
+class GeoPhpTest extends TestCase {
     
     public function testNamespace() {
         $this->assertEquals('1.2.1',  GeoPhp::version());

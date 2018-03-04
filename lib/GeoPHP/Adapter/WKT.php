@@ -12,6 +12,8 @@ use GeoPHP\Geometry\Polygon;
 use GeoPHP\Geometry\MultiPoint;
 use GeoPHP\Geometry\MultiLineString;
 use GeoPHP\Geometry\MultiPolygon;
+use GEOSWKTReader;
+use GEOSWKTWriter;
 
 /**
  * WKT (Well Known Text) Adapter

@@ -12,6 +12,7 @@ namespace GeoPHP;
 
 use GeoPHP\Geometry\Geometry;
 use GeoPHP\Geometry\GeometryCollection;
+use GEOSWKBWriter;
 
 class GeoPhp {
 

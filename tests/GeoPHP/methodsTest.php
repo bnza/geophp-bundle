@@ -3,8 +3,9 @@
 namespace Tests\AppBundle\Component;
 
 use GeoPHP\GeoPhp;
+use PHPUnit\Framework\TestCase;
 
-class MethodsTests extends \PHPUnit_Framework_TestCase {
+class MethodsTests extends TestCase {
 
     function setUp() {
         
