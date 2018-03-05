@@ -3,8 +3,9 @@
 namespace GeoPHP\Tests;
 
 use GeoPHP\GeoPhp;
+use PHPUnit\Framework\TestCase;
 
-class Tests_20120702 extends \PHPUnit_Framework_TestCase {
+class Tests_20120702 extends TestCase {
 
   function setUp() {
 

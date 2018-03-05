@@ -1,8 +1,9 @@
 <?php
 
 use GeoPHP\GeoPhp;
+use PHPUnit\Framework\TestCase;
 
-class GeosTests extends \PHPUnit_Framework_TestCase {
+class GeosTests extends TestCase {
 
     function setUp() {
         
@@ -15,11 +16,11 @@ class GeosTests extends \PHPUnit_Framework_TestCase {
             );
             return;
         }
-        foreach (scandir('./input') as $file) {
+        foreach (scandir(__DIR__ . '/input') as $file) {
             $parts = explode('.', $file);
             if ($parts[0]) {
                 $format = $parts[1];
-                $value = file_get_contents('./input/' . $file);
+                $value = file_get_contents(__DIR__ . '/input/' . $file);
                 #echo "\nloading: " . $file . " for format: " . $format;
                 $geometry = geoPHP::load($value, $format);
 

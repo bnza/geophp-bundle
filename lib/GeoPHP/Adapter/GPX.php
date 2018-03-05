@@ -14,6 +14,7 @@ use GeoPHP\GeoPhp;
 use GeoPHP\Geometry\Geometry;
 use GeoPHP\Geometry\Point;
 use GeoPHP\Geometry\LineString;
+use InvalidText;
 
 
 /**

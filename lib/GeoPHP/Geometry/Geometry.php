@@ -4,10 +4,7 @@
 namespace GeoPHP\Geometry;
 
 use GeoPHP\GeoPhp;
-use GeoPHP\Geometry\Geometry;
-use GeoPHP\Geometry\LineString;
-use GeoPHP\Geometry\Point;
-use GeoPHP\Geometry\Polygon;
+use GEOSWKBReader;
 
 
 /**

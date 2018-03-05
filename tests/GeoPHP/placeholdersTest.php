@@ -1,8 +1,9 @@
 <?php
 
 use GeoPHP\GeoPhp;
+use PHPUnit\Framework\TestCase;
 
-class PlaceholdersTests extends \PHPUnit_Framework_TestCase {
+class PlaceholdersTests extends TestCase {
 
   function setUp() {
 
